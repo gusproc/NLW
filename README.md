@@ -17,3 +17,19 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+
+# Dia 2 
+mix ecto.gen.migration [create_users_table] >> criar a tabela
+
+mix ecto.migrate >> subir a tabela
+
+mix ecto.reset >> para resetar o database
+
+Manipulamos o banco de dados com Ecto criando migrations que definem as tabelas e as colunas, 
+
+schemas é a parte de modelagem de dados
+
+Repo é parte do ecto que faz as querys e "conversa com o banco dedos"
+
+ecto - [https://hexdocs.pm/ecto/Ecto.html](https://hexdocs.pm/ecto/Ecto.html)
