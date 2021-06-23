@@ -15,7 +15,7 @@ defmodule WabanexWeb.IMCController do
   defp render_response(conn, result, status) do
     conn
     |> put_status(status)
-    |> json (%{result: result})
+    |> json(%{result: result})
   end
 
 end
