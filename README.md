@@ -28,13 +28,17 @@ finalizamos a aula vendo um pouco sobre as rotas e os controllers
 notas: mix phx.new wabanex --no-html --no-webpack >> começa o projeto
 
 mudar as configs postgres nos dev.exs e test.exs
+
 mix ecto.setup >> banco de dados has been created
+
 iex.bat -S mix >> abrir o elixir interativo
+
 IO.inspect() >> tipo um console.log()
+
 mix phx.server >> sobe o server/aplicaçao
 
 # Dia 2 
-mix ecto.gen.migration [create_users_table] >> criar a tabela
+mix ecto.gen.migration `[create_users_table]` >> criar a tabela
 
 mix ecto.migrate >> subir a tabela
 
@@ -57,4 +61,12 @@ Configuramos a lib absinthe usada para integraçao com graphql
 
 [https://hexdocs.pm/absinthe/overview.html](https://hexdocs.pm/absinthe/overview.html)
 
-Criamos um resolver, um schema e uma mutation e testamos a interface do graphql
+Criamos um resolver para o user, um schema e uma mutation e testamos a interface do graphql
+
+# Dia 4
+
+Primeiramente usamos o crudry, uma lib que serve de middleware para traduzir a mensagem de erro da interface do graphql em texto claro e legível
+
+Entao criamos a tabela trainings e a tabela exercises 
+
+fizemos entao todo migration e schemas das tabelas e criamos a mutation no root.ex

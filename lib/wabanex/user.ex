@@ -11,6 +11,7 @@ defmodule Wabanex.User do
     field :name, :string
     field :password, :string
 
+    has_one :training, Training
     timestamps()
   end
 
