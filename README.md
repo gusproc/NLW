@@ -70,3 +70,15 @@ Primeiramente usamos o crudry, uma lib que serve de middleware para traduzir a m
 Entao criamos a tabela trainings e a tabela exercises 
 
 fizemos entao todo migration e schemas das tabelas e criamos a mutation no root.ex
+
+# Dia 5
+
+Retornamos o treino atual do usuario e assim a logica do usuario esta pronta: cadastro de usuario, cadastro de treino e retorno de usuario.
+
+Entao fomos aos testes começando pelo modulo de calculo de imc
+
+Depois teste de changeset usando errors_on que é uma funçao do DataCase, que lê mapa certinho
+
+Teste de controller, testamos a conexao utilizando funcoes do ConnCase
+
+Entao fizemos os testes de Schema do Graphql que tambem usa funcoes do ConnCase

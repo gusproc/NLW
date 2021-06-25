@@ -30,7 +30,7 @@ defmodule WabanexWeb.Schema.Types.Root do
       field :create_training, type: :training do
         arg :input, non_null(:create_training_input)
 
-        resolve &UserResolver.create/2
+        resolve &TrainingResolver.create/2
         middleware TranslateErrors
       end
 
