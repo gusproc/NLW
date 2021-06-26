@@ -1,8 +1,12 @@
 defmodule Wabanex.User do
   use Ecto.Schema
   import Ecto.Changeset
+
   alias Wabanex.Training
+  alias Wabanex.Personaldata
+
   @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
 
   @fields [:email, :password, :name]
 
@@ -11,6 +15,7 @@ defmodule Wabanex.User do
     field :name, :string
     field :password, :string
 
+    has_one :personaldata, Personaldata
     has_many :trainings, Training
     timestamps()
   end
@@ -23,5 +28,6 @@ defmodule Wabanex.User do
     |> validate_length(:name, min: 2)
     |> validate_format(:email, ~r/@/)
     |> unique_constraint([:email])
+    |> cast_assoc(:personaldata)
   end
 end
